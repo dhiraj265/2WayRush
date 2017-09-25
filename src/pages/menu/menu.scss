@@ -1,0 +1,37 @@
+.road_menu {
+  width: 100%;
+  background-image: url(../assets/img/road_background_menu.png);
+  background-color: #e0dad6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  position: absolute;
+  top: 15%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  color: #722d0e;
+  z-index: 3;
+}
+
+#author {
+  position: absolute;
+  margin-left:5%;
+  width: 90%;
+  color: #722d0e;
+  z-index: 3;
+  bottom: 10px;
+  font-size: 15px;
+}
+
+#top {
+  margin-top: 175px;
+}
+
+.selector{
+  width: 70%;
+  margin-left: 15%;
+}

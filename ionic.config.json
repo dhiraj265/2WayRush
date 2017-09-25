@@ -1,5 +1,6 @@
 {
   "name": "2WayRush",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {}
 }

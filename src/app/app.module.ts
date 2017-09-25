@@ -1,30 +1,54 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { NativeAudio } from '@ionic-native/native-audio';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { Vibration } from '@ionic-native/vibration';
+
+import { GamePage } from '../pages/game/game';
+import { MenuPage } from '../pages/menu/menu';
+import { GreenCarMovementDirective,BlueCarMovementDirective } from '../pages/game/car-movement.directive';
+import { GreenCarPumpConstructionMovementDirective, BlueCarPumpConstructionMovementDirective } from '../pages/game/petrol_pump-construction-movement.directive';
+import { GameServiceProvider } from '../providers/game-service/game-service';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    GamePage,
+    MenuPage,
+    GreenCarMovementDirective,
+    BlueCarMovementDirective,
+    GreenCarPumpConstructionMovementDirective,
+    BlueCarPumpConstructionMovementDirective
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    GamePage,
+    MenuPage
   ],
   providers: [
+    NativeAudio,
+    NativeStorage,
+    AndroidFullScreen,
+    ScreenOrientation,
+    Vibration,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GameServiceProvider
   ]
 })
 export class AppModule {}

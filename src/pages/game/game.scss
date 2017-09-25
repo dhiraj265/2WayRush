@@ -1,0 +1,72 @@
+.road {
+  width: 100%;
+  background-image: url(../assets/img/road_background.png);
+  background-color: #E0DAD6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#green_road {
+  width: 50%;
+  height:100%;
+  position: fixed;
+  left: 0;
+}
+
+#blue_road {
+  width: 50%;
+  height:100%;
+  position: fixed;
+  right:0;
+}
+#green_car{
+  position: fixed;
+  top: 1%;
+}
+
+#blue_car{
+  position: fixed;
+  bottom: 1%;
+}
+
+#score_board{
+  position: fixed;
+  top: 0;
+  right: 45%;
+  width: 10%;
+  z-index: 2;
+}
+
+#score_show{
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: #722d0e;
+  z-index: 3;
+}
+.gpcleft{
+  position: fixed;
+  left: 8%;
+  width: 15%;
+  height: 8%;
+}
+
+.gpcright{
+  position: fixed;
+  left: 27%;
+  width: 15%;
+  height: 8%;
+}
+.bpcleft{
+  position: fixed;
+  right: 27%;
+  width: 15%;
+  height: 8%;
+}
+
+.bpcright{
+  position: fixed;
+  right: 8%;
+  width: 15%;
+  height: 8%;
+}

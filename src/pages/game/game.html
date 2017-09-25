@@ -1,0 +1,10 @@
+<ion-content padding class="road">
+  <img src="./assets/img/sign_board.png" id="score_board" (click)="emitPause()">
+  <span id="score_show"> {{ gsp.getScore() }}</span>
+  <div id="green_road" greenCarMovement greenCarPCMovement>
+    <img width="20%" id="green_car"  [@greenCar]="greenCarPosition" src="./assets/img/green_car.png" >
+  </div>
+  <div id="blue_road" blueCarMovement blueCarPCMovement>
+    <img width="20%" id="blue_car" [@blueCar]="blueCarPosition" src="./assets/img/blue_car.png" >
+  </div>
+</ion-content>
